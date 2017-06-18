@@ -163,7 +163,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+<<<<<<< HEAD
   bourbon
+=======
+  bourbon (~> 4.3, >= 4.3.4)
+>>>>>>> origin/master
   byebug
   coffee-rails (~> 4.2)
   font-awesome-rails

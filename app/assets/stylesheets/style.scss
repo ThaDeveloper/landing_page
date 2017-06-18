@@ -1,0 +1,186 @@
+/* *****************
+Primary style
+
+******************** */
+html * {
+  -webkit-font-smoothing: antialised;
+  -moz-osx-font-smoothing: antialised;
+}
+/*bourbon*/
+*, *:after, *:before{
+  @include box-sizing(border-box)
+}
+
+body{
+  font: {
+    size: 100%;
+    family: $primary-font;
+  }
+  color: $color-3;
+  background-color: $background;
+}
+a {
+  text-decoration: none;
+}
+
+/* --------------------------
+Modules - reusable parts of the design
+
+---------------------------- */
+/* bourbon
+.cd-content{
+  @include outer-container(100%);
+}
+.cd-container{
+  @include span-columns(10);
+  @include shift(1);
+}*/
+
+/* -----------------------
+Main components
+
+------------------- */
+.cd-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height-S;
+  background: $color-1;
+  box-shadow: 0 1px 3px rgba(#000, .2);
+  z-index: 3;
+  #cd-logo{
+    float: left;
+    margin: 13px 0 0 5%;
+    a{
+      display: block;
+      color: #fff;
+      font-size: 1.5em;
+    }
+  }
+  @include MQ(M){
+    height: $header-height-M;
+
+    #cd-logo{
+      margin: 23px 0 0 5%;
+    }
+  }
+}
+
+.cd-main-nav{
+  float: right;
+  margin-right: 5%;
+  width: 44px;
+  height: 100%;
+  background: url('cd-icon-menu.svg') no-repeat center center;
+  background-size: 44px 44px;
+  cursor: pointer;
+
+  ul{
+      position: absolute;
+      padding-left: 0;
+      margin-top: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      @include transform(translateY(-100%));
+
+      &.is-visible{
+        @include transform(translateY($header-height-S));
+      }
+  }
+  a{
+    display: block;
+    height: $header-height-S;
+    line-height: $header-height-S;
+    padding-left: 5%;
+    background: $background;
+    border: 1px solid ligthen($background, 3%);
+    color: #fff;
+
+  }
+  @include MQ(M){
+    width: auto;
+    height: auto;
+    background: none;
+    cursor: auto;
+
+    ul{
+      position: static;
+      width: auto;
+      @include transform(translateY(0));
+      line-height: $header-height-M;
+
+      &.is-visible{
+        @include transform(translateY(0));
+      }
+    }
+    li{
+      display: inline-block;
+      margin-left: 1em;
+    }
+    a{
+      display: inline-block;
+      height: auto;
+      line-height: normal;
+      background: transparent;
+      padding: .6em 1em;
+      border-top: none;
+      border: none;
+      @include font-size(13px);
+      font-weight: bold;
+      text-transform: uppercase;;
+    }
+  }
+}
+
+#cd-intro{
+  position: relative;
+  height: $intro-height-S;
+  margin-top: $intro-height-S;
+  z-index: 1;
+
+  #cd-intro-background{
+    height: 100%;
+    width: 100%;
+    background: url('ocean_coast.jpg') no-repeat center center;
+    background-size: cover;
+    box-shadow: 0 0 30px rgba(#000, .5);
+
+  }
+
+  #cd-intro-tagline{
+    position: absolute;
+    width: 90%;
+    max-width: $L;
+    @include center;
+  }
+  h1{
+    text-transform: uppercase;;
+    @include font-size(24px);
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(#000, .2);
+  }
+
+  @include MQ(M){
+    height: $intro-height-M;
+    margin-top: $header-height-M;
+
+    h1{
+      @include font-size(30px);
+    }
+  }
+  @include MQ(L){
+    position: fixed;
+    top: $header-height-M;
+    left: 0;
+    width: 100%auto;
+    height: $intro-height-L;
+    margin-top: 0;
+
+    h1{
+      @include font-size(32px)
+    }
+  }
+}
