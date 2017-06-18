@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 /*Determine what browsers are being used, what rules*/
+>>>>>>> origin/master
 /*!
  * Modernizr v2.7.1
  * www.modernizr.com

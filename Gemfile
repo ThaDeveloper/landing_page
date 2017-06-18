@@ -36,10 +36,15 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 #design
+<<<<<<< HEAD
+gem 'font-awesome-rails'
+gem 'bourbon'
+=======
 gem "font-awesome-rails"
 gem 'bourbon', '~> 4.3', '>= 4.3.4'
+>>>>>>> origin/master
 gem 'neat'
-gem "normalize-rails"
+gem 'normalize-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
