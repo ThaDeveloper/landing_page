@@ -163,7 +163,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bourbon (~> 4.3, >= 4.3.4)
+  bourbon
   byebug
   coffee-rails (~> 4.2)
   font-awesome-rails

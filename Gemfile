@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 
 #design
 gem "font-awesome-rails"
-gem 'bourbon', '~> 4.3', '>= 4.3.4'
+gem 'bourbon'
 gem 'neat'
 gem "normalize-rails"
 
