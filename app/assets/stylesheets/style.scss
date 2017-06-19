@@ -7,8 +7,11 @@ html * {
   -moz-osx-font-smoothing: antialised;
 }
 /*bourbon*/
-*, *:after, *:before{
-  @include box-sizing(border-box)
+*, *:after, *::before{
+  /*@include box-sizing(border-box)*/
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body{
@@ -175,7 +178,7 @@ Main components
     position: fixed;
     top: $header-height-M;
     left: 0;
-    width: 100%auto;
+    width: 100%;
     height: $intro-height-L;
     margin-top: 0;
 
